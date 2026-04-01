@@ -14,12 +14,17 @@
       <label for="year">
         Enter Year:
       </label>
-      <input type="number" id="year">
+      <input type=text id="year">
       <button onclick="result()">Check</button>
     </form>
     <script>
       function result() {
-        alert("The Halloween of " + document.getElementById("year").value + " does not fall on Friday the 13th.");
+        const year = document.getElementById("year").value;
+        if (isNaN(year)) {
+          alert(year + " is not a valid year");
+        } else {
+          alert("The Halloween of " + year + " does not fall on Friday the 13th.");
+        }
       }
     </script>
   </body>
